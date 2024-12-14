@@ -185,7 +185,7 @@ async def favicon():
     return JSONResponse({"data": "invalid endpoint"}, status_code=200)
 
 async def main():
-    config = uvicorn.Config("fast_api_app:app", host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), log_level="info")
+    config = uvicorn.Config("fastappi_app:app", host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), log_level="info")
     server = uvicorn.Server(config)
     await server.serve()
 
